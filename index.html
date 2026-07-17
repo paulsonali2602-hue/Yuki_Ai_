@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuki — Personal AI Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="snow"></canvas>
+
+<div class="app">
+
+  <!-- Character stage -->
+  <section class="stage">
+    <div class="stage-bg" style="background-image:url('assets/yuki-bg.jpg')"></div>
+    <div class="stage-scrim"></div>
+
+    <div class="plaque">
+      <div class="plaque-name">Yuki</div>
+      <div class="plaque-role">Personal AI Assistant</div>
+      <div class="plaque-creator">Created by Sensei</div>
+    </div>
+
+    <div class="floating-card traits-card">
+      <div class="section-label">Personality</div>
+      <div class="chips">
+        <span class="chip trait">Calm</span>
+        <span class="chip trait">Intelligent</span>
+        <span class="chip trait">Funny</span>
+        <span class="chip trait">Loyal</span>
+        <span class="chip trait">Helpful</span>
+      </div>
+    </div>
+
+    <div class="floating-card skills-card">
+      <div class="section-label">Skills</div>
+      <div class="chips">
+        <span class="chip">Chat</span>
+        <span class="chip">Coding Helper</span>
+        <span class="chip">Gaming Companion</span>
+        <span class="chip soon">Voice Assistant</span>
+        <span class="chip soon">Phone Control</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chat -->
+  <section class="chat-wrap">
+    <div class="chat-header">
+      <div class="header-left">
+        <span class="mini-avatar">❄️</span>
+        <div>
+          <div class="title">Yuki</div>
+          <div class="sub"><span class="status-dot"></span>online — waiting for Sensei</div>
+        </div>
+      </div>
+      <button class="rules-toggle" id="rulesToggle" type="button" aria-expanded="false" aria-controls="rulesPanel">
+        Rules
+      </button>
+    </div>
+
+    <div class="rules-panel" id="rulesPanel" hidden>
+      <ul class="rules">
+        <li>Always calls you "Sensei"</li>
+        <li>Never rude</li>
+        <li>Always explains clearly</li>
+        <li>Keeps things natural &amp; friendly</li>
+      </ul>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="msg yuki">
+        <span class="who">Yuki</span>
+        Good day, Sensei~ ❄️ I'm Yuki, your personal assistant. Ask me anything — chat, code, or just to keep you company while you game.
+      </div>
+    </div>
+
+    <form class="composer" id="composer">
+      <textarea id="input" rows="1" placeholder="Message Yuki..."></textarea>
+      <button type="submit" class="send-btn" id="sendBtn" aria-label="Send message">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </form>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
